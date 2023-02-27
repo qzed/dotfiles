@@ -1,0 +1,27 @@
+if isdirectory($HOME . '/.local/share/vim/undo') == 0
+    :silent !mkdir -p ~/.local/share/vim/undo > /dev/null 2>&1
+endif
+
+if isdirectory($HOME . '/.local/share/vim/backup') == 0
+    :silent !mkdir -p ~/.local/share/vim/backup > /dev/null 2>&1
+endif
+
+if isdirectory($HOME . '/.local/share/vim/swap') == 0
+    :silent !mkdir -p ~/.local/share/vim/swap > /dev/null 2>&1
+endif
+
+set undodir=~/.local/share/vim/undo/
+set backupdir=~/.local/share/vim/backup/
+set directory=~/.local/share/vim/swap/
+
+syntax on
+
+set tabstop=4
+set softtabstop=0
+set expandtab
+set shiftwidth=4
+set smarttab
+
+set number
+
+set mouse=a
