@@ -1,0 +1,9 @@
+# load profile if available
+if [ -f ~/.profile ]; then
+	. ~/.profile
+fi
+
+# load bashrc if available
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
