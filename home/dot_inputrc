@@ -1,0 +1,15 @@
+set editing-mode vi
+
+set bell-style none
+
+set completion-ignore-case on
+set completion-map-case on
+
+# key bindings
+"\eOA": history-search-backward
+"\eOB": history-search-forward
+Control-e: end-of-line
+Control-k: history-search-backward
+Control-j: history-search-forward
+Control-b: vi-backward-word
+Control-w: vi-forward-word

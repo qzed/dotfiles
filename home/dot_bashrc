@@ -1,0 +1,11 @@
+# BASH main configuration file.
+
+# Common paths
+BASH_CONFIG_DIR="${XDG_CONFIG_HOME:-"${HOME}/.config"}/bash"
+
+source "${BASH_CONFIG_DIR}/utils.bash"
+source "${BASH_CONFIG_DIR}/misc.bash"
+source "${BASH_CONFIG_DIR}/history.bash"
+source "${BASH_CONFIG_DIR}/theme.bash"
+source "${BASH_CONFIG_DIR}/directories.bash"
+source "${BASH_CONFIG_DIR}/aliases.bash"
