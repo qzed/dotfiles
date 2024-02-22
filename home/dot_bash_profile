@@ -3,6 +3,13 @@ if [ -f ~/.profile ]; then
 	. ~/.profile
 fi
 
+# if zsh exists, try to use that
+if is_executable "zsh" ; then
+    export SHELL="$(which "zsh")"
+    exec "${SHELL}" -l
+    exit 0
+fi
+
 # load bashrc if available
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
