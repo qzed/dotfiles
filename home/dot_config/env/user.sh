@@ -6,7 +6,7 @@ source "${XDG_CONFIG_HOME:-${HOME}/.config}/env/utils.sh"
 
 
 # Set `EDITOR` and `VISUAL`
-if is_command "nvim" ; then         # Use `nvim` if available
+if is_executable "nvim" ; then          # Use `nvim` if available
     nvim="$(command -v nvim)"
 
     export VISUAL="${nvim}"
@@ -15,7 +15,7 @@ if is_command "nvim" ; then         # Use `nvim` if available
 
     unset nvim
 
-elif is_command "vim" ; then        # Fallback 1: `vim`
+elif is_executable "vim" ; then         # Fallback 1: `vim`
     vim="$(command -v vim)"
 
     export VISUAL="${vim}"
@@ -24,7 +24,7 @@ elif is_command "vim" ; then        # Fallback 1: `vim`
 
     unset vim
 
-elif is_command "vi" ; then         # Fallback 2: `vi`
+elif is_executable "vi" ; then          # Fallback 2: `vi`
     vi="$(command -v vi)"
 
     export VISUAL="${vi}"

@@ -86,3 +86,15 @@ flags_prepend () {
 is_command() {
     command -v "${1}" >/dev/null 2>&1
 }
+
+# Check if command exists and is an executable file (script or bina
+is_executable() {
+    local info="$(command -v "${1}" 2>/dev/null)"
+
+    if [[ "${info}" == /* ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
